@@ -527,8 +527,8 @@ namespace Runnatics.Services
             Race race,
             Event evt)
         {
-            var chipTime = result?.FinishTime.HasValue == true
-                ? TimeSpan.FromMilliseconds(result.FinishTime.Value)
+            var chipTime = result?.NetTime.HasValue == true
+                ? TimeSpan.FromMilliseconds(result.NetTime.Value)
                 : (TimeSpan?)null;
 
             var gunTime = result?.GunTime.HasValue == true
